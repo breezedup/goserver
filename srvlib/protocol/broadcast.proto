@@ -1,0 +1,23 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketBroadcast {
+	BCSessionUnion SessParam = 1;
+	int32 PacketId = 2;
+	bytes Data = 3;
+}
+
+message BCSessionUnion {
+	BCClientSession Bccs = 1;
+	BCServerSession Bcss = 2;
+}
+
+message BCClientSession {
+	bool Dummy = 1;
+}
+
+message BCServerSession {
+	int32 SArea = 1;
+	int32 SType = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketRedirect {
+	int64 ClientSid = 1;
+	repeated SrvInfo SrvRoutes = 2;
+	int32 PacketId = 3;
+	bytes Data = 4;
+}
+
+message SrvInfo {
+	int32 SArea = 1;
+	int32 SType = 2;
+	int32 SId = 3;
+}

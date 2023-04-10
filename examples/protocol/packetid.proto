@@ -1,0 +1,9 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+enum PacketID {
+    PACKET_UNKNOW   = 0;
+	PACKET_CS_PING	= 1000;
+	PACKET_SC_PONG	= 1001;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSSrvRegiste {
+	int32 Id = 1;
+	int32 Type = 2;
+	int32 AreaId = 3;
+	string Name = 4;
+	string Data = 5;
+}

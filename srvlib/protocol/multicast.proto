@@ -1,0 +1,24 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketMulticast {
+	repeated MCSessionUnion Sessions = 1;
+	int32 PacketId = 2;
+	bytes Data = 3;
+}
+
+message MCSessionUnion {
+	MCClientSession Mccs = 1;
+	MCServerSession Mcss = 2;
+}
+
+message MCClientSession {
+	int64 SId = 1;
+}
+
+message MCServerSession {
+	int32 SArea = 1;
+	int32 SType = 2;
+	int32 SId = 3;
+}

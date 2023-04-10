@@ -1,0 +1,21 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+
+message SCGateInfo {
+	int32 SrvType = 1;
+	int32 SrvId = 2;
+	string AuthKey = 3;
+	string Ip = 4;
+	int32 Port = 5;
+}
+
+message CSSessionBundle {
+	string Key = 1;
+	int64 Ts = 2;
+}
+
+message CSSessionAck {
+	uint32 LogicNo = 1;
+}

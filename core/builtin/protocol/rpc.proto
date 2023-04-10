@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message RpcRequest {
+	string ServiceMethod = 1;
+	uint64 Seq = 2;
+	bytes Args = 3;
+}
+
+message RpcResponse {
+	string ServiceMethod = 1;
+	uint64 Seq = 2;
+	string Error = 3;
+	bytes Reply = 4;
+}

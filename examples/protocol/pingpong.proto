@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message CSPacketPing {
+	int64 TimeStamb = 1;
+	bytes Message = 2;
+}
+
+message SCPacketPong {
+	int64 TimeStamb = 1;
+	bytes Message = 2;
+}

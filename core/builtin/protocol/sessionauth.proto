@@ -1,0 +1,12 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketAuth {
+	string AuthKey = 1;
+	int64 Timestamp = 2;
+}
+
+message SSPacketAuthAck {
+	string Msg = 1;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message ServerLoad {
+	int32 SrvType = 1;
+	int32 SrvId = 2;
+	int32 CurLoad = 3;
+}
+
+message ServerStateSwitch {
+	int32 SrvType = 1;
+	int32 SrvId = 2;
+}

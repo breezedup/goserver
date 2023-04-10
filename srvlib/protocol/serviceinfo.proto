@@ -1,0 +1,50 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message ServiceInfo {
+	int32 AreaId = 1;
+	int32 SrvId = 2;
+	int32 SrvType = 3;
+	int32 SrvPID = 4;
+	string SrvName = 5;
+	string NetworkType = 6;
+	string Ip = 7;
+	int32 Port = 8;
+	int32 WriteTimeOut = 9;
+	int32 ReadTimeOut = 10;
+	int32 IdleTimeOut = 11;
+	int32 MaxDone = 12;
+	int32 MaxPend = 13;
+	int32 MaxPacket = 14;
+	int32 RcvBuff = 15;
+	int32 SndBuff = 16;
+	int32 SoLinger = 17;
+	bool IsAuth = 18;
+	bool KeepAlive = 19;
+	bool NoDelay = 20;
+	bool IsAutoReconn = 21;
+	bool IsInnerLink = 22;
+	bool SupportFragment = 23;
+	bool AllowMultiConn = 24;
+	string AuthKey = 25;
+	string EncoderName = 26;
+	string DecoderName = 27;
+	repeated string FilterChain = 28;
+	repeated string HandlerChain = 29;
+	string Protocol = 30;
+	string Path = 31;
+	string OuterIp = 32;
+}
+
+message SSServiceRegiste {
+	repeated ServiceInfo Services = 1;
+}
+
+message SSServiceInfo {
+	ServiceInfo Service = 1;
+}
+
+message SSServiceShut {
+	ServiceInfo Service = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketTransit {
+	int32 SArea = 1;
+	int32 SType = 2;
+	int32 SId = 3;
+	int32 PacketId = 4;
+	bytes Data = 5;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketSlices {
+	int32 SeqNo = 1;
+	int32 TotalSize = 2;
+	int32 Offset = 3;
+	bytes PacketData = 4;
+}

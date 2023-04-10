@@ -1,0 +1,7 @@
+syntax = "proto3";
+package protocol;
+option go_package = ".;protocol";
+
+message SSPacketKeepAlive {
+	int32 Flag = 1;
+}

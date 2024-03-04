@@ -3,12 +3,12 @@ package netlib
 
 import (
 	"fmt"
-	"strconv"
-	"time"
-
+	"github.com/xtaci/kcp-go"
 	"github.com/breezedup/goserver/core/logger"
 	"github.com/breezedup/goserver/core/utils"
+	"strconv"
 	"sync/atomic"
+	"time"
 )
 
 type UdpConnector struct {

@@ -4,12 +4,12 @@ package netlib
 import (
 	"bytes"
 	"fmt"
+	"github.com/xtaci/kcp-go"
+	"github.com/breezedup/goserver/core/logger"
+	"github.com/breezedup/goserver/core/utils"
 	"runtime"
 	"strconv"
 	"time"
-
-	"github.com/breezedup/goserver/core/logger"
-	"github.com/breezedup/goserver/core/utils"
 )
 
 type UdpSession struct {

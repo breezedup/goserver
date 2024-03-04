@@ -3,11 +3,11 @@ package netlib
 
 import (
 	"fmt"
-	"net"
-	"strconv"
-
+	"github.com/xtaci/kcp-go"
 	"github.com/breezedup/goserver/core/logger"
 	"github.com/breezedup/goserver/core/utils"
+	"net"
+	"strconv"
 	"sync/atomic"
 	"time"
 )
